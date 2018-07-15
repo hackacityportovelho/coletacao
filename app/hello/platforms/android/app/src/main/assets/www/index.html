@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src &apos;self&apos; data: gap: https://ssl.gstatic.com &apos;unsafe-eval&apos;; style-src &apos;self&apos; http://* https://* &apos;unsafe-inline&apos;; media-src *; img-src &apos;self&apos; http://* https://* data: content: &apos;unsafe-inline&apos; &apos;unsafe-eval&apos;; script-src 'self' http://* https://* 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+		<style>
+		/* For avoiding title truncation in wp8 */
+		.ui-header .ui-title {
+				overflow: visible !important;
+		}
+		/* For fixing the absolute position issue for the default cordova gen page*/
+		#cjp-accordion1 .app {
+				left: 5px !important;
+				margin: 5px !important;
+				position: relative !important;
+		}
+		</style>
+        <title>ColetAÇÃO</title>
+    </head>
+    <body>		<!-- page 1 -->
+		<div data-role="page" id="homePage">
+			<div data-role="header">
+				<h1>ColetAÇÃO</h1>
+			</div>
+			<ul data-role="listview">
+				<li><a href="#page1">Seu QRCode</a></li>
+				<li><a href="#page2">Locais de Coleta</a></li>
+				<li><a href="#page4">Sorteios</a></li>
+				<li><a href="#page5">Seus Cupons e Pontos</a></li>
+				<li><a href="#page6">Patrocinadores</a></li>
+				<li><a href="#page7">Sobre</a></li>
+			</ul>
+			
+			<div data-role="footer" data-position="fixed">
+				<h1></h1>
+			</div><!-- /footer -->
+		</div> <!-- home page -->
+
+		<!-- page 1 -->
+		<div data-role="page" id="page1">
+			<div data-role="header">
+				<a href="#" data-icon="back" data-rel="back" title="Go back">Voltar</a>
+				<h1>Seu QRCode</h1>
+			</div>
+
+					<div class="ui-content">
+		<img id="qrcode" name="qrcode" src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=https://meudominio.com.br/usuario?" />
+</div>
+<!-- end page 1 content -->
+			
+			<div data-role="footer" data-position="fixed">
+			</div><!-- /footer -->
+		</div><!-- /page1 -->
+
+		<!-- page 2 -->
+		<div data-role="page" id="page2">
+			<div data-role="header">
+				 <a href="#" data-icon="back" data-rel="back" title="Go back">Voltar</a>
+					<h1>&nbsp;&nbsp;&nbsp;Locais de Coleta</h1>
+			</div>
+
+			<div class="ui-content">
+				<p>&bull; Espaço Alternativo, Av. Gov. Jorge Teixeira, 4026 - Costa e Silva, Porto Velho - RO, 76803-586</p>
+				<p>&bull; Praça Aloísio Ferreira, Av. Farquar, 1714 - Panair, Porto Velho - RO, 76801-466</p>
+			</div><!-- end page 2 content -->
+
+			<div data-role="footer" data-position="fixed">
+				<h1></h1>
+			</div><!-- /footer -->
+		</div><!-- /page2 -->
+
+		<!-- page 4 -->
+		<div data-role="page" id="page4">
+			<div data-role="header">
+			<a href="#" data-icon="back" data-rel="back" title="Go back">Voltar</a>
+				<h1>Sorteios</h1>
+			</div>
+
+			<div class="ui-content">
+				<p>05/06/2018</p>
+				<p>SGGGFGFGG ganhou R$ 100, patrocinador X</p>
+				<p>SGGGFGFGG ganhou R$ 50, patrocinador Y</p>
+				<p>05/07/2018</p>
+				<p>SGGGFGFGG ganhou R$ 100, patrocinador X</p>
+				<p>SGGGFGFGG ganhou R$ 50, patrocinador Y</p>
+			</div><!-- end page 4 content -->
+
+			<div data-role="footer" data-position="fixed">
+				<h1></h1>
+			</div><!-- /footer -->
+		</div><!-- /page4 -->
+
+		<!-- page 5 -->
+		<div data-role="page" id="page5">
+			<div data-role="header">
+			<a href="#" data-icon="back" data-rel="back" title="Go back">Voltar</a>
+				<h1>&nbsp;&nbsp;&nbsp;Seus Cupons e Pontos</h1>
+			</div>
+
+			<div class="ui-content">
+				<p>Total de pontos: 200</p>
+				<p>10/05/2018: KSHDFKFHKH, HDFAHJSDFDF, SDFDFSDF, SDFSDF, somando 100 pontos</p>
+				<p>18/05/2018: KSHDFKFHKH, HDFAHJSDFDF, SDFDFSDF, SDFSDF, somando 100 pontos</p>
+			</div><!-- end page 5 content -->
+
+			<div data-role="footer" data-position="fixed">
+				<h1></h1>
+			</div><!-- /footer -->
+		</div><!-- /page5 -->
+
+
+		<!-- page 6 -->
+		<div data-role="page" id="page6">
+			<div data-role="header">
+			<a href="#" data-icon="back" data-rel="back" title="Go back">Voltar</a>
+				<h1>&nbsp;&nbsp;&nbsp;Patrocinadores</h1>
+			</div>
+
+			<div class="ui-content">
+				<img src="img/patrocinador1.jpg" width="200" height="200"/>
+				<img src="img/patrocinador2.jpg" width="200" height="200"/>
+			</div><!-- end page 6 content -->
+
+			<div data-role="footer" data-position="fixed">
+				<h1></h1>
+			</div><!-- /footer -->
+		</div><!-- /page6 -->
+
+		<!-- page 7 -->
+		<div data-role="page" id="page7">
+			<div data-role="header">
+			<a href="#" data-icon="back" data-rel="back" title="Go back">Voltar</a>
+				<h1>Sobre</h1>
+			</div>
+
+			<div class="ui-content">
+				<p>Essa é uma iniciativa da... para proporcinar educação ambiental para polução em geral nas áreas públicas de modo lúdico e informal.</p>
+				<p>Contato 0800 XXXXX</p>
+			</div><!-- end page 7 content -->
+
+			<div data-role="footer" data-position="fixed">
+				<h1></h1>
+			</div><!-- /footer -->
+		</div><!-- /page7 -->
+
+<script type="text/javascript" src="cordova.js"></script><script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script><script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script><script type="text/javascript" src="js/index.js"></script><script src="js/md5.min.js"></script><script type="text/javascript" id="jqm-trans-disable">
+		/* For having a faster transition */
+		$(document).on("mobileinit", function() {
+				$.mobile.defaultPageTransition = "none";
+				$.mobile.defaultDialogTransition = "none";
+		});
+		document.addEventListener("deviceready", onDeviceReady, false);
+		function onDeviceReady() {			
+			console.log($("#qrcode")[0].src);
+			console.log(device.uuid);
+			console.log(device.serial);
+			console.log(md5(device.uuid + device.serial));
+			$("#qrcode")[0].src = $("#qrcode")[0].src + "userid=" + md5(device.uuid + device.serial);
+			console.log($("#qrcode")[0].src);
+		}
+		</script></body>
+</html>
